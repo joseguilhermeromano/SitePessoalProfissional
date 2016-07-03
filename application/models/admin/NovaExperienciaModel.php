@@ -8,7 +8,7 @@ class NovaExperienciaModel extends CI_Model{
 	}
 	
 	function Inserir(){
-                $data['form_post_url']='admin/registro/NovaExperiencia/';
+                $data['form_post_url']='admin/NovaExperiencia/';
                 $this->form_validation->set_rules('nomeinstituicao','Nome da Instituição','trim|required');
                 $this->form_validation->set_rules('tempoexperiencia','Tempo de Experiência','trim|required');
                 $this->form_validation->set_rules('descricaofuncoes','Descricao das Funções','trim|required');

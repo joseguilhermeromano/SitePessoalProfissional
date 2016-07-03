@@ -11,15 +11,15 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav hidden-xs">
-        <li><a href="<?php echo site_url("admin/dadospessoais"); ?>">Dados Pessoais</a></li>
-        <li><a href="<?php echo site_url("admin/projetos"); ?>">Projetos</a></li>
-        <li><a href="<?php echo site_url("registro/Formacoes"); ?>">Formações</a></li>
+        <li><a href="<?php echo site_url("admin/DadosPessoais"); ?>">Dados Pessoais</a></li>
+        <li><a href="<?php echo site_url("admin/Projetos"); ?>">Projetos</a></li>
+        <li><a href="<?php echo site_url("admin/Formacoes"); ?>">Formações</a></li>
         
       </ul>
       <ul class="nav navbar-nav hidden-lg hidden-md hidden-sm text-center">
-        <li class="active"><a href="<?php echo site_url("admin/dadospessoais"); ?>">Dados Pessoais</a></li>
-        <li><a href="<?php echo site_url("admin/projetos"); ?>">Projetos</a></li>
-        <li><a href="<?php echo site_url("admin/formacoes"); ?>">Formações</a></li>
+        <li class="active"><a href="<?php echo site_url("admin/DadosPessoais"); ?>">Dados Pessoais</a></li>
+        <li><a href="<?php echo site_url("admin/Projetos"); ?>">Projetos</a></li>
+        <li><a href="<?php echo site_url("admin/Formacoes"); ?>">Formações</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right  hidden-lg hidden-md hidden-sm text-center">
         <li><a href="<?php echo site_url(); ?>"><span class="glyphicon glyphicon-log-in"></span> Logoff</a></li>

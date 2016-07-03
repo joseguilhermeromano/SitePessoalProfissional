@@ -10,6 +10,10 @@ class ControladorInterno extends My_Controller {
         $this->load->model('admin/NovaExperienciaModel','novaexpe');
         $this->load->model('admin/ConhecimentosModel','conmodel');
         $this->load->model('admin/EscolaridadeModel','escomodel');
+        $this->load->model('admin/DadosPessoaisModel','dadospessoais');
+        
+//        $this->load->library('uploadimage','','img');
+//        $this->img->upload($_FILES['image_field'],'pt_BR');
     }
     
     public function view($page="dadospessoais",$data=null){
@@ -21,34 +25,74 @@ class ControladorInterno extends My_Controller {
 
             $this->load->view('common/header');
             $this->load->view('common/menuadmin');
+            if($data==null){
+                $data=$this->ConsultarTudo($page);
+            }
             $this->load->view('admin/'.$page,$data);
             $this->load->view('common/footer');
     }
     
-    public function Formacoes($metodo=''){
-       
-        switch ($metodo){
-            case "InserirExperiencia":
+    public function inserir($page='DadosPessoais'){
+        $data= null;
+        switch($page){
+            case "Experiencias":
                 $data['mensagem']=$this->novaexpe->Inserir();
-                
+                if ($data['mensagem']==null){
+                    $page="NovaExperiencia";
+                }else{
+                    $page="Formacoes";
+                }
                 break;
-            case "InserirConhecimento":
+            
+            case "Conhecimentos":
                 $data['mensagem']=$this->conmodel->Inserir();
-
+                if ($data['mensagem']==null){
+                    $page="NovoConhecimento";
+                }else{
+                    $page="Formacoes";
+                }
                 break;
-            case "InserirEscolaridade":
+            
+            case "Escolaridades":
                 $data['mensagem']=$this->escomodel->Inserir();
-
+                if ($data['mensagem']==null){
+                    $page="NovaEscolaridade";
+                }else{
+                    $page="Formacoes";
+                }
+                break;
+            
+            case "Projetos":
+                        
+                break;
+            
+                default:
+                    
                 break;
         }
-            
-                $data['experiencias']=$this->novaexpe->ConsultarTudo();
-                $data['conhecimentos']=$this->conmodel->ConsultarTudo();
-                $data['escolaridades']=$this->escomodel->ConsultarTudo();
-                //echo "teste";
-                $this->view('formacoes',$data);
+        
+                $data=$this->ConsultarTudo($page,$data);
+                $this->view($page,$data);
                 
         }  
+        
+        
+        public function ConsultarTudo($page="DadosPessoais",$data=null){
+             switch ($page){
+                case "DadosPessoais":
+                    $data['dadospessoais']=$this->dadospessoais->ConsultarTudo();
+                    break;
+                case "Formacoes":
+                    $data['experiencias']=$this->novaexpe->ConsultarTudo();
+                    $data['conhecimentos']=$this->conmodel->ConsultarTudo();
+                    $data['escolaridades']=$this->escomodel->ConsultarTudo();
+                    break;
+                default:
+                    $data=null;
+                    break;
+            }
+            return $data;
+        }
     }
  
    

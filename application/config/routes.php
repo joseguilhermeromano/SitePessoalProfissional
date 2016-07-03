@@ -60,11 +60,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //$route['welcome/(:any)']='welcome/boasvindas/';
 
 $route['default_controller'] = 'Controlador/view';
-$route [ 'site/(:any)' ]  =  'Controlador/view/$1'; 
+$route [ 'site/(:any)' ]  =  'Controlador/view/$1';
 $route [ 'admin' ]  =  'ControladorInterno/view';
-$route [ 'registro/Formacoes' ]  =  'ControladorInterno/Formacoes';
-$route [ 'registro/Formacoes/(:any)' ]  =  'ControladorInterno/Formacoes/$1';
+$route [ 'admin/inserir/(:any)' ]  =  'ControladorInterno/inserir/$1';
 $route [ 'admin/(:any)' ]  =  'ControladorInterno/view/$1';
+
+
+//$route [ 'registro/Formacoes' ]  =  'ControladorInterno/Formacoes';
+//$route [ 'registro/Formacoes/(:any)' ]  =  'ControladorInterno/Formacoes/$1';
+//$route [ 'admin/(:any)' ]  =  'ControladorInterno/view/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
