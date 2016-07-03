@@ -1,0 +1,86 @@
+/* Manter footer fixo */
+html,body{
+    height:100%;
+}
+
+#tudo{
+    min-height: 100%;
+    position: relative;
+}
+* html #tudo{
+    height:100%;
+}
+
+.container{
+    margin-top: 10px;
+    padding-bottom: 100px;
+}
+
+/* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    .thumbnail{
+        margin:10px;
+    }
+    
+    .painel{
+        padding: 10px;
+    }
+    
+    .formato-tabela td{
+        padding: 15px;
+    }
+    
+    .estilo-input {margin-right:10px; font-family:helvetica; color:#666;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    -webkit-box-shadow: #DCDCDC 2px 2px 3px 0px inset;
+    border:2px solid #DCDCDC;
+    outline:none;
+    }
+
+    .estilo-input:focus {
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    /*-webkit-box-shadow: 0px 0px 15px 1px #00c64b;
+    -moz-box-shadow: 0px 0px 15px 1px #00c64b;*/
+    /*box-shadow: 0px 0px 5px 0px #00c64b;*/
+    border:2px solid #696969;
+    outline:none; 
+    }
+    /* Set black background color, white text and some padding */
+    
+     #footer {
+        background-color: #1C1C1C;
+        color: white;
+        padding: 30px;
+        border-top: 1px solid #000000;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        border-top-color: #DCDCDC;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }

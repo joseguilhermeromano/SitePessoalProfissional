@@ -23,7 +23,7 @@
 			<link href="<?php echo base_url ( 'assets/css/main_nav.css' );?>" rel="stylesheet">
 			<link href="<?php echo base_url ( 'assets/css/dashboard.css' );?>" rel="stylesheet">
 			<link href="<?php echo base_url ( 'assets/css/tablesorter/blue/style.css' );?>" rel="stylesheet">
-			
+			<link href="<?php echo base_url ( 'bootstrap/css/estilo.css' );?>"	rel="stylesheet">
                         
                         
 			<script src="<?php echo base_url('assets/js/jquery/jquery.js');?>"></script>
@@ -38,5 +38,6 @@
 		</head>
 		
 		<body>
-		<div class="container-fluid">
+		<!--<div class="container-fluid">-->
+                <div id="tudo">
 		<!-- END header.php -->
